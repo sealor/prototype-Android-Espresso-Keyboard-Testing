@@ -7,40 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="myespressotestapplication.android.sealor.github.io.testing.MainActivity">
+    tools:context="io.github.sealor.prototype.android.espresso.ui.testing.MainActivity">
 
     <TextView
+        android:id="@+id/inputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Type your name:"
-        android:id="@+id/inputLabel"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:labelFor="@+id/input"
+        android:text="@string/type_your_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/input"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/inputLabel" />
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/inputLabel"
+        android:inputType="text" />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="greet me"
-        android:id="@+id/button"
-        android:layout_below="@+id/input"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp" />
+        android:layout_below="@+id/input"
+        android:layout_marginTop="26dp"
+        android:text="@string/greet_me" />
 
     <TextView
+        android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/output"
-        android:layout_below="@+id/button"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="53dp" />
+        android:layout_below="@+id/button"
+        android:layout_marginTop="53dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 </RelativeLayout>
