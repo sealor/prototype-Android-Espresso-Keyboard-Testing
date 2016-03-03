@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.sealor.prototype.android.espresso.ui.testing">
+    package="io.github.sealor.prototype.android.espresso.keyboard.testing">
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name="io.github.sealor.prototype.android.espresso.ui.testing.MainActivity"
+            android:name="io.github.sealor.prototype.android.espresso.keyboard.testing.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="io.github.sealor.prototype.android.espresso.keyboard.testing.MyKeyboard"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
     </application>
 
 </manifest>

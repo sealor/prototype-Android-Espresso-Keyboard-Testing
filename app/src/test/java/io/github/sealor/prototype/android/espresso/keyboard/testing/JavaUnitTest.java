@@ -1,4 +1,4 @@
-package io.github.sealor.prototype.android.espresso.ui.testing;
+package io.github.sealor.prototype.android.espresso.keyboard.testing;
 
 import org.junit.Test;
 

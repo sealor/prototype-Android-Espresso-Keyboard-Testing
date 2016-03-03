@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prototype Android Espresso UI Testing</string>
+    <string name="app_name">Prototype Android Espresso Keyboard Testing</string>
     <string name="action_settings">Settings</string>
     <string name="type_your_name">Type your name:</string>
     <string name="greet_me">greet me</string>
